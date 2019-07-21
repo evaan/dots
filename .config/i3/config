@@ -128,26 +128,25 @@ client.urgent           #282828 #282828 #fb4934 #282828 #282828
 client.placeholder      #282828 #282828 #ebdbb2 #282828 #282828
 
 # Run commands on startup
-exec_always --no-startup-id bash /home/evan/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill /home/evan/.wallpaper.png
-exec_always --no-startup-id compton -b
-exec termite
+exec_always --no-startup-id bash /home/evan/.config/polybar/launch.sh #Start polybar.
+exec_always --no-startup-id feh --bg-fill /home/evan/.wallpaper.png #Set wallpaper.
+exec_always --no-startup-id compton -b #Start compton.
+exec termite #Open termite.
 
-exec --no-startup-id xss-lock -- /usr/bin/betterlockscreen --text "Welcome back, Evan." -l
+exec --no-startup-id xss-lock -- /usr/bin/betterlockscreen --text "Welcome back, Evan." -l #Start betterlockscreen when lid closed
 
-exec_always xinput set-prop 11 302 1
-exec_always xinput set-prop 11 312 0
+exec_always xinput set-prop 11 302 1 #Enable tap with trackpad.
+exec_always xinput set-prop 11 312 0 #Enable trackpad while typing.
 
-for_window [class="Spotify"] move to workspace $ws0
-exec --no-startup-id spotify
+for_window [class="Spotify"] move to workspace $ws0 #Move spotify to workspace 10
+exec --no-startup-id spotify #Start spotify.
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% unmute #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% unmute #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && pactl set-sink-mute 1 0 #increase sound volume and unmute.
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && pactl set-sink-mute 1 0 #decrease sound volume and unmute
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle #Toggle mute
 
-# Media player controls
+# Media player controls (Pretty obvious what these do lol)
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-

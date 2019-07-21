@@ -100,12 +100,12 @@ label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding    = 2
 
 ; Visible labels
-label-visible            = %icon% %name%
+label-visible            = %icon%
 label-visible-foreground = ${colors.foreground}
 label-visible-padding    = 2
 
 ; Urgent labels
-label-urgent            = %icon% %name%
+label-urgent            = %icon%
 label-urgent-foreground = ${colors.red}
 label-urgent-padding    = 2
 
@@ -197,30 +197,17 @@ label-warn-padding    = 2
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume 32123= <label-volume> <bar-volume>
-label-volume =  %percentage%%
-label-volume-foreground = ${root.foreground}
+; Volume label
+label-volume            =  %percentage%%
+label-volume-background = ${colors.blue}
+label-volume-foreground = ${colors.foreground}
+label-volume-padding    = 2
 
-label-muted =  muted
-label-muted-foreground = #666
-sink = alsa_output.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-label-volume-underline = #8be9fd
+; Muted label
+label-muted            =  Muted
+label-muted-background = ${colors.red}
+label-muted-foreground = ${colors.foreground}
+label-muted-padding    = 2
 
 [module/lock]
 type = custom/text
