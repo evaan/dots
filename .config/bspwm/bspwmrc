@@ -1,0 +1,18 @@
+#!/bin/sh
+
+xsetroot -cursor_name left_ptr
+
+xinput set-prop 11 318 2, 3, 0, 0, 1, 3, 0
+
+bspc config focus_follows_pointer true
+bspc config border_width 0
+bspc config window_gap 5
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+feh --bg-fill /home/evan/.wallpaper.png
+
+sxhkd &
+picom -b &
+polybar bar &
+xmousepasteblock &

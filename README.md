@@ -1,5 +1,11 @@
-# Evan's Personal dotfiles
-Most likely ripped somewhere off [r/unixporn](https://www.reddit.com/r/unixporn) but don't really care ``¯\_(ツ)_/¯``
+<div align="center">
+    <h1>Dotfiles</h1>
+    <blockquote>
+        <p>Evan's Void Linux dotfiles.</p>
+    </blockquote>
+</div>
 
-## Gruvbox (Evan edition)
-![screenshot u cant see lol](https://raw.githubusercontent.com/evanlol/dotfiles/master/screenshots/gruvbox.png)
+![Screenshot](./screenshots/desktop.png)
+
+## st
+You can use my st config [here](https://github.com/7OU/st).
