@@ -8,4 +8,4 @@
 ![Screenshot](./screenshots/desktop.png)
 
 ## st
-You can use my st config [here](https://github.com/7OU/st).
+You can use my st config [here](https://github.com/obamabob/st).
